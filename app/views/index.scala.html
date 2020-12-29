@@ -1,5 +1,5 @@
 @import model.SunInfo
-@(sunInfo: SunInfo)
+@(sunInfo: SunInfo, temprature: Double)
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,8 +8,9 @@
            href="@routes.Application.versioned("images/favicon.png")">
     </head>
     <body>
-        <h1>Hello Play</h1>
+        <h1>Hello Pleasanton CA</h1>
         <div>Sunrise Time: @sunInfo.sunrise </div>
         <div>Sunset Time: @sunInfo.sunset</div>
+        <div>Temrature: @temprature</div>
     </body>
 </html>
