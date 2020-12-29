@@ -7,9 +7,11 @@ import scala.concurrent.Future
 
 class WeatherService(ws: WSClient) {
   def getTemperature(lat: Double, lon: Double): Future[Double] = {
+
+    val appid = sys.env.get("WEATHER_APP_ID")
     val weatherResponseF = ws.url("http://api.openweathermap.org/data/2.5/weather?" +
       s"lat=$lat&lon=$lon&units=metric&" +
-      "appid=0665fbc41ca3f63b962da7bfc2304ade").get()
+      s"appid=$appid").get()
 
     weatherResponseF.map { weatherResponse =>
       val weatherJson = weatherResponse.json
