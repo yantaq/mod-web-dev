@@ -1,0 +1,33 @@
+logs
+target
+.bloop
+.metals
+.bsp
+.vscode
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+node_modules
+public/compiled
+npm-debug.log
+
+# play framework gitignore
+# Ignore Play! working directory #
+bin/
+/db
+.idea
+/lib/
+/logs/
+/modules
+/project/project
+/project/target
+/target
+tmp/
+test-result
+server.pid
+*.eml
+/dist/
+.cache
