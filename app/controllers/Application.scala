@@ -8,10 +8,9 @@ import services.{SunService, WeatherService}
 import scala.concurrent.ExecutionContext.Implicits.global
 
 
-class Application @Inject() (components: ControllerComponents, assets: Assets, ws: WSClient)
+class Application (components: ControllerComponents, assets: Assets,
+                            sunService: SunService, weatherService: WeatherService)
     extends AbstractController(components) {
-  val sunService = new SunService(ws)
-  val weatherService = new WeatherService(ws)
 
   def index = Action.async {
     val lat = 37.66
