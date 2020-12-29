@@ -9,7 +9,7 @@ libraryDependencies ++= Seq(
   jdbc,
   caffeine,
   ws,
-  guice
+  "com.softwaremill.macwire" %% "macros" % "2.3.3" % Provided
 )
 
 resolvers += "sonatype-snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
