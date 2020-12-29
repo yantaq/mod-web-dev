@@ -38,4 +38,8 @@ class AppComponents(context: Context) extends BuiltInComponentsFromContext(conte
     logger.info("The app is about to stop")
     Future.successful(0)
   }
+
+  val onStart = {
+    logger.info("The app is about to start")
+  }
 }
